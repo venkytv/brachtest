@@ -6,10 +6,10 @@ pipeline {
         sh '''#!/bin/bash
 BUILD_STATUS=$(( RANDOM % 2 ))
 if [[ "$BUILD_STATUS" -eq 0 ]]; then
-    echo "Build passed"
-    exit 0
+Â  Â  echo "$$ Build passed"
+Â  Â  exit 0
 fi
-echo "Build failed"
+echo "$$ Build failed"
 exit 1'''
       }
     }
