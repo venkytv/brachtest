@@ -4,6 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         sh '''#!/bin/bash
+set -x
 BUILD_STATUS=$(( RANDOM % 2 ))
 if [[ "$BUILD_STATUS" -eq 0 ]]; then
     echo "$$ Build passed"
